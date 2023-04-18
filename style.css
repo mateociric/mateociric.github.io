@@ -1,0 +1,145 @@
+@import './style/main.css';
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--fmain);
+    background: radial-gradient(circle, #ffffff 0%, #d2d2d2 100%);
+}
+
+.page {
+    width: 57rem;
+    height: 71rem;
+    display: flex;
+    flex-direction: row;
+    box-shadow: var(--shadow);
+}
+
+.aside {
+    width: 33%;
+    color: var(--fcolor-aside);
+    text-align: center;
+    background-color: var(--bgcolor-aside);
+}
+
+.applicant-photo {
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.applicant-photo img {
+    width: 60%;
+    outline: .2rem solid var(--img-outline);
+    display: block;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+    transform: rotateZ(-5deg);
+}
+
+.aside h3 {
+    padding-left: 1.5rem;
+    font-size: var(--fsize-h3);
+    font-weight: 300;
+    text-align: left;
+    line-height: 4rem;
+    background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255) 2%, #ff4111 2%);
+}
+
+.aside h3:last-of-type {
+    margin-bottom: .5rem;
+}
+
+.aside__container {
+    height: 4rem;
+    position: relative;
+    transition: background-color 1s;
+}
+
+.aside__container:hover {
+    opacity: 1;
+    background-color: var(--bgcolor-aside-container);
+}
+
+.aside__container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: left, opacity, 1s;
+}
+
+.aside__container:hover img {
+    left: 3rem;
+    opacity: 0;
+}
+
+.aside a {
+    font-size: var(--fsize-a);
+    color: var(--fcolor-aside);
+    text-decoration: none;
+}
+
+.aside a:hover {
+    cursor: pointer;
+}
+
+.aside a:visited {
+    cursor: pointer;
+}
+
+.aside__container a {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.aside__container:hover a {
+    opacity: 1;
+}
+
+.icon {
+    width: 2.5rem;
+    filter: invert();
+}
+
+.aside a[href="https://brainlabacademy.hr/"] {
+    width: 100%;
+    padding: .5rem 0 .5rem 0;
+    display: inline-block;
+    transition: background-color 1s;
+}
+
+.aside a[href="https://brainlabacademy.hr/"]:hover {
+    background-color: var(--bgcolor-aside-a);
+}
+
+.aside p {
+    margin-bottom: 1.5rem;
+    font-size: var(--fsize-p);
+}
+
+.description {
+    width: 67%;
+    padding: 2rem;
+    background-color: var(--bgcolor-description);
+}
+
+.description h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: .5rem;
+    color: #ff5d11;
+}
+
+.description h3 {
+    font-size: var(--fsize-h3);
+    font-weight: 300;
+    color: #ff5d11;
+}
+
+.description p {
+    margin: 2rem 0 2rem;
+    font-size: var(--fsize-p);
+    line-height: 2rem;
+}
